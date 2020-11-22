@@ -11,7 +11,7 @@ import subprocess, sys, time
 safariDriver = webdriver.Safari(port=0, executable_path="/usr/bin/safaridriver", quiet=False)
 
 # Round Rock
-# browser.get("https://weather.com/weather/today/l/2c8d802ebb0d8711dbc9422d22ca32037e06cb6560f2e2c52ddb0ad2af21f90e")
+# safariDriver.get("https://weather.com/weather/today/l/2c8d802ebb0d8711dbc9422d22ca32037e06cb6560f2e2c52ddb0ad2af21f90e")
 weatherCity = input("Please enter the zip code or city name only then press return: ")
 
 safariDriver.get("https://weather.com/")
