@@ -17,13 +17,13 @@ weatherCity = input("Please enter the zip code or city name only then press retu
 safariDriver.get("https://weather.com/")
 WebDriverWait(safariDriver, 10).until(
     EC.element_to_be_clickable((By.ID, "LocationSearch_input")))
-search_input = safariDriver.find_element_by_id("LocationSearch_input")
-search_input.send_keys(weatherCity)
+searchWebsiteItem = safariDriver.find_element_by_id("LocationSearch_input")
+searchWebsiteItem.send_keys(weatherCity)
 WebDriverWait(safariDriver, 10).until(
     EC.element_to_be_clickable((By.ID, "LocationSearch_listbox")))
-search_input.click()
-search_input.send_keys(Keys.RETURN)
-search_input.send_keys(Keys.RETURN)
+searchWebsiteItem.click()
+searchWebsiteItem.send_keys(Keys.RETURN)
+searchWebsiteItem.send_keys(Keys.RETURN)
 while True:
     WebDriverWait(safariDriver, 10).until(
         EC.element_to_be_clickable((By.ID, "WxuDailyWeatherCard-main-bb1a17e7-dc20-421a-b1b8-c117308c6626")))
